@@ -7,10 +7,20 @@ int main(){
     // using adjacency matrix representation
     int adj[n+1][m+1];
     for(int i=0; i<m; i++){
-        int u,v;
+        int u,v,weight;
+        cout<<"enter edge (u,v) and weight: ";
         cin >>u>>v;
-        adj[u][v] = 1;
-        adj[v][u] = 1;
+        cin>>weight;
+        adj[u][v] = weight;
+        adj[v][u] = weight; // for undirected graphbb
     }
-return 0;
+    cout << "Adjacency Matrix:\n";
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n; j++) {
+            cout << adj[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    cin.get();
 }
