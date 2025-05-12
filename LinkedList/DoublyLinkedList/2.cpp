@@ -87,6 +87,28 @@ Node* delkthelement(Node*head, int k){
     }
 
 }
+void deleteNode(Node* temp){
+    Node* prev = temp->back;
+    Node* front = temp->next;
+
+    if(front==NULL && prev==NULL){
+        return;
+    }
+    else if(prev==NULL){
+        front->back = NULL;
+        delete temp;
+    }
+    else if(front==NULL){
+        prev->next = NULL;
+        delete temp;
+    }
+    else{
+        prev->next = front;
+        front->back = prev;
+        delete temp;
+    }
+}
+    
 void print (Node* head){
     while(head!=NULL){
         cout<<head->data<<" ";
@@ -98,14 +120,14 @@ int main(){
     Node* head= convertArr2DLL(arr);
     print(head);
     cout<<endl;
-    head= delheadDLL(head);
-    print(head);
-    cout<<endl;
-    head= deltailDLL(head);
-    print(head);
-    cout<<endl;
-    head=delkthelement(head,2);
-    print(head);
+    // head= delheadDLL(head);
+    // print(head);
+    // cout<<endl;
+    // head= deltailDLL(head);
+    // print(head);
+    // cout<<endl;
+    // head=delkthelement(head,2);
+    // print(head);
     cin.get();
     return 0;
 }
