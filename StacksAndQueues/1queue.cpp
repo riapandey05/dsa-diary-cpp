@@ -1,0 +1,8 @@
+// follows fifo mechanism, it is a container which stores elements
+// in a linear fashion, the first element added is the first one to be removed          
+// has 4 operations
+// push - to add an element
+// pop - to remove an element (from first)
+// front - to get the front element (wont delete it,just returns it)    
+// back - to get the back element (wont delete it,just returns it)
+// isEmpty - to check if the queue is empty
