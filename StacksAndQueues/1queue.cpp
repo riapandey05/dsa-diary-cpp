@@ -9,7 +9,7 @@
 
 // now let us implement queue using array
 #include <iostream>
-using namespace _std;
+using namespace std;
 class Myqueue{
     private:
         int arr[1000];
@@ -21,6 +21,6 @@ class Myqueue{
             end = -1;
         }
     void push(int x){
-        
+
     }
-}
+};
