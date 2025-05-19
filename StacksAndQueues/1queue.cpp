@@ -6,3 +6,21 @@
 // front - to get the front element (wont delete it,just returns it)    
 // back - to get the back element (wont delete it,just returns it)
 // isEmpty - to check if the queue is empty
+
+// now let us implement queue using array
+#include <iostream>
+using namespace _std;
+class Myqueue{
+    private:
+        int arr[1000];
+        int front;
+        int end;
+    public:
+        Myqueue(){
+            front = -1;
+            end = -1;
+        }
+    void push(int x){
+        
+    }
+}
